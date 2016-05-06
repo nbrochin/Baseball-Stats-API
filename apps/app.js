@@ -63,13 +63,13 @@ $(document).ready(function(){
 
 
   // }); 
-FantasyData.mlb = {};
+// FantasyData.mlb = {};
 
-  FantasyData.mlb.activeTeams = function(callback) {
-    var uri = buildMlbUrl('Teams');
+//   FantasyData.mlb.activeTeams = function(callback) {
+//     var uri = buildMlbUrl('Teams');
 
-    makeRequest(uri, callback);
-  };
+//     makeRequest(uri, callback);
+//   };
 
 
 
