@@ -48,7 +48,9 @@ $(document).ready(function(){
                 // Request headers
                 xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key","bb32e0f1b71046f4a5844dc55af9e844");
             },
-            
+            type: "GET",
+            // Request body
+            data: "{body}",
         })
         .done(function(data) {
             alert("success");
@@ -57,6 +59,7 @@ $(document).ready(function(){
             alert("error");
         });
     });
+
 
     //-------------------------------------- end fantasydata code --------------------
 
@@ -73,19 +76,19 @@ $(document).ready(function(){
 
 
 
-function showResults(results){
-  $.each(results, function(index,fddata){
-  	  var Height = data.Player.Height;
-  	  var LastName = data.Player.LastName;
+// function showResults(results){
+//   $.each(results, function(index,fddata){
+//   	  var Height = data.Player.Height;
+//   	  var LastName = data.Player.LastName;
 
 
-    // console.log(video.snippet.thumbnails.medium.url);
-    // console.log(ytdata.nextPageToken);
-    // console.log(video.snippet.vTitle);
-  });
+//     // console.log(video.snippet.thumbnails.medium.url);
+//     // console.log(ytdata.nextPageToken);
+//     // console.log(video.snippet.vTitle);
+//   });
 
-  $('#search-results').html(LastName);
+//   $('#search-results').html(LastName);
 
-}
+// }
 
 });
