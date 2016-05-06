@@ -34,8 +34,8 @@ $(document).ready(function(){
 //-------------------------------------- start fantasydata code --------------------
     $(function () {
         var params = {
-          season: 2016,
-          teamID: 'NYY',
+          // season: 2016,
+          // teamID: 'NYY',
 
             // Request parameters
         };
@@ -43,7 +43,7 @@ $(document).ready(function(){
         teamID = $('#query').val();
 
         $.ajax({
-            url: "https://api.fantasydata.net/mlb/v2/JSON/Players?" + $.param(params),
+            url: "https://api.fantasydata.net/mlb/v2/JSON/Players/ARI",
             beforeSend: function(xhrObj){
                 // Request headers
                 xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key","bb32e0f1b71046f4a5844dc55af9e844");
