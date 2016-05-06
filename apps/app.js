@@ -1,57 +1,19 @@
 $(document).ready(function(){
 
-// Your use of the YouTube API must comply with the Terms of Service:
-// https://developers.google.com/youtube/terms
-
-// $(function(){
-//   $('#search-term').submit(function(event){
-//     event.preventDefault();
-//     var teamID = $('#query').val();
-//     getRequest(teamID);
-//    $('li.topic-title').html(teamID);
-//   });
-// });
-
-
-// function getRequest(q, token){
-//   var params = {
-//     q: q,
-//     part:'snippet',
-//     key:'AIzaSyDhcv5fxPkNS9EpFfuhJryGtMike4zwOPE',
-//     maxResults:15,
-//     pageToken:token,
-//   };
-
-//   $.ajax({
-//     url: "https://api.stackexchange.com/2.2/questions/unanswered",
-//     data: request,
-//     dataType: "jsonp",//use jsonp to avoid cross origin issues
-//     type: "GET",
-//   })
-//   .done(function(result){ //this waits for the ajax to return with a succesful promise object
-//     var searchResults = showSearchResultsQ(request.tagged, result.items.length);
-
-//-------------------------------------- start fantasydata code --------------------
-    $(function () {
+$(function() {
         var params = {
-          // season: 2016,
-          // teamID: 'NYY',
-
+        key: "bb32e0f1b71046f4a5844dc55af9e844",
+        // teams: "ARI",
+        // callback: "callback"
             // Request parameters
         };
-
-        teamID = $('#query').val();
-
+      
         $.ajax({
-            url: "https://api.fantasydata.net/mlb/v2/XML/Players/ARI",
-            beforeSend: function(xhrObj){
-                // Request headers
-                xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key","bb32e0f1b71046f4a5844dc55af9e844");
-            },
+            url: "https://api.fantasydata.net/mlb/v2/json/teams?" + $.param(params),
+            
             type: "GET",
             // Request body
-            // data: "Division",
-            dataType: "XML"
+            // data: 'Division',
         })
         .done(function(data) {
             alert("success");
