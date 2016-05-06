@@ -50,7 +50,7 @@ $(document).ready(function(){
             },
             type: "GET",
             // Request body
-            data: "{body}",
+            data: "request",
         })
         .done(function(data) {
             alert("success");
