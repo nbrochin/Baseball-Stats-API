@@ -50,7 +50,8 @@ $(document).ready(function(){
             },
             type: "GET",
             // Request body
-            data: "request",
+            data: "Division",
+            dataType: "json"
         })
         .done(function(data) {
             alert("success");
