@@ -3,14 +3,14 @@ $(document).ready(function(){
 // Your use of the YouTube API must comply with the Terms of Service:
 // https://developers.google.com/youtube/terms
 
-$(function(){
-  $('#search-term').submit(function(event){
-    event.preventDefault();
-    var teamID = $('#query').val();
-    getRequest(teamID);
-   $('li.topic-title').html(teamID);
-  });
-});
+// $(function(){
+//   $('#search-term').submit(function(event){
+//     event.preventDefault();
+//     var teamID = $('#query').val();
+//     getRequest(teamID);
+//    $('li.topic-title').html(teamID);
+//   });
+// });
 
 
 // function getRequest(q, token){
@@ -32,7 +32,7 @@ $(function(){
 //     var searchResults = showSearchResultsQ(request.tagged, result.items.length);
 
 //-------------------------------------- start fantasydata code --------------------
-    $(function getRequest (data) {
+    $(function () {
         var params = {
           season: 2016,
           teamID: 'NYY',
@@ -63,6 +63,13 @@ $(function(){
 
 
   // }); 
+FantasyData.mlb = {};
+
+  FantasyData.mlb.activeTeams = function(callback) {
+    var uri = buildMlbUrl('Teams');
+
+    makeRequest(uri, callback);
+  };
 
 
 
