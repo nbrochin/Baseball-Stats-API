@@ -43,7 +43,7 @@ $(document).ready(function(){
         teamID = $('#query').val();
 
         $.ajax({
-            url: "https://api.fantasydata.net/mlb/v2/JSON/Players/ARI",
+            url: "https://api.fantasydata.net/mlb/v2/XML/Players/ARI",
             beforeSend: function(xhrObj){
                 // Request headers
                 xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key","bb32e0f1b71046f4a5844dc55af9e844");
@@ -51,7 +51,7 @@ $(document).ready(function(){
             type: "GET",
             // Request body
             // data: "Division",
-            dataType: "json"
+            dataType: "XML"
         })
         .done(function(data) {
             alert("success");
