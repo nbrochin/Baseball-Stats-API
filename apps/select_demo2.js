@@ -36,26 +36,26 @@ function tamingselect()
 			trigger.appendChild(document.createTextNode(sels[i].options[0].text));
 			sels[i].parentNode.insertBefore(trigger,sels[i]);
 			var replaceUL=document.createElement('ul');
-			for(var j=0;j<sels[i].getElementsByTagName('option').length;j++)
-			{
-				var newli=document.createElement('li');
-				var newa=document.createElement('a');
-				newli.v=sels[i].getElementsByTagName('option')[j].value;
-				newli.elm=hiddenfield;
-				newli.istrigger=trigger;
-				newa.href='#';
-				newa.appendChild(document.createTextNode(
-				sels[i].getElementsByTagName('option')[j].text));
-				newli.onclick=function(){ 
-					this.elm.value=this.v;
-					ts_swapclass(this.istrigger,ts_triggeron,ts_triggeroff);
-					ts_swapclass(this.parentNode,ts_dropdownopen,ts_dropdownclosed)
-					this.istrigger.firstChild.nodeValue=this.firstChild.firstChild.nodeValue;
-					return false;
-				}
-				newli.appendChild(newa);
-				replaceUL.appendChild(newli);
-			}
+			// for(var j=0;j<sels[i].getElementsByTagName('option').length;j++)
+			// {
+			// 	var newli=document.createElement('li');
+			// 	var newa=document.createElement('a');
+			// 	newli.v=sels[i].getElementsByTagName('option')[j].value;
+			// 	newli.elm=hiddenfield;
+			// 	newli.istrigger=trigger;
+			// 	newa.href='#';
+			// 	newa.appendChild(document.createTextNode(
+			// 	sels[i].getElementsByTagName('option')[j].text));
+			// 	newli.onclick=function(){ 
+			// 		this.elm.value=this.v;
+			// 		ts_swapclass(this.istrigger,ts_triggeron,ts_triggeroff);
+			// 		ts_swapclass(this.parentNode,ts_dropdownopen,ts_dropdownclosed)
+			// 		this.istrigger.firstChild.nodeValue=this.firstChild.firstChild.nodeValue;
+			// 		return false;
+			// 	}
+			// 	newli.appendChild(newa);
+			// 	replaceUL.appendChild(newli);
+			// }
 			ts_addclass(replaceUL,ts_dropdownclosed);
 			var div=document.createElement('div');
 			div.appendChild(replaceUL);
