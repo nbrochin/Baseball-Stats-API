@@ -55,10 +55,10 @@ $("#first-choice").change(function() {
         vals = ['Please choose from above'];
     }
     
-    var $secondChoice = $("#second-choice ul.dropdownhidden_demo2");
+    var $secondChoice = $("#second-choice ul.dropdownhidden_demo2 li");
     $secondChoice.empty();
     $.each(vals, function(index, value) {
-      $secondChoice.append("<li><a>" + value + "<a></li>");
+      $secondChoice.append("<li>" + value + "</li>");
     });
 
   });
