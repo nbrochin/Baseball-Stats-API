@@ -20,7 +20,7 @@ $(function() {
           
           $.each(data, function(i, data) {
               var teamCity = data.City;
-              console.log(data.Position + ": " + data.FirstName + " " + data.LastName + ",");
+              // console.log(data.Position + ": " + data.FirstName + " " + data.LastName + ",");
 
               Name += 'eggs';
               City += 'tuna';
@@ -42,96 +42,96 @@ $("#first-choice").change(function() {
   var $dropdown = $(this);
 
   $.getJSON("data.json", function(data) {
-    // console.log(data)
+    console.log(data)
     var key = $dropdown.val();
     var vals = [];
               
     switch(key) {
-      case 'Braves':
+      case 'braves':
         vals = data.braves.split(",");
         break;
-      case 'Orioles':
+      case 'orioles':
         vals = data.orioles.split(",");
         break;
-        case 'Red Sox':
+        case 'redSox':
         vals = data.redSox.split(",");
         break;
-      case 'Blue Jays':
+      case 'blueJays':
         vals = data.blueJays.split(",");
         break;
-        case 'Rays':
+        case 'rays':
         vals = data.rays.split(",");
         break;
-      case 'Cubs':
+      case 'cubs':
         vals = data.cubs.split(",");
         break;
-        case 'White Sox':
+        case 'whiteSox':
         vals = data.whiteSox.split(",");
         break;
-      case 'Reds':
+      case 'reds':
         vals = data.reds.split(",");
         break;
-        case 'Indians':
+        case 'indians':
         vals = data.indians.split(",");
         break;
-      case 'Rockies':
+      case 'rockies':
         vals = data.rockies.split(",");
         break;
         case 'Tigers':
         vals = data.tigers.split(",");
         break;
-      case 'Astros':
+      case 'astros':
         vals = data.astros.split(",");
         break;
-        case 'Royals':
+        case 'royals':
         vals = data.royals.split(",");
         break;
-      case 'Angels':
+      case 'angels':
         vals = data.angels.split(",");
         break;
-        case 'Dodgers':
+        case 'dodgers':
         vals = data.Dodgers.split(",");
         break;
-      case 'Marlins':
+      case 'marlins':
         vals = data.marlins.split(",");
         break;
-        case 'Brewers':
+        case 'brewers':
         vals = data.brewers.split(",");
         break;
-      case 'Twins':
+      case 'twins':
         vals = data.twins.split(",");
         break;
-        case 'Mets':
+        case 'mets':
         vals = data.mets.split(",");
         break;
-      case 'Yankees':
+      case 'yankees':
         vals = data.yankees.split(",");
         break;
-        case 'Athletics':
+        case 'athletics':
         vals = data.athletics.split(",");
         break;
-        case 'Phillies':
+        case 'phillies':
         vals = data.phillies.split(",");
         break;
-        case 'Pirates':
+        case 'pirates':
         vals = data.pirates.split(",");
         break;
-        case 'Padres':
+        case 'padres':
         vals = data.padres.split(",");
         break;
-        case 'Mariners':
+        case 'mariners':
         vals = data.mariners.split(",");
         break;
-        case 'Giants':
+        case 'giants':
         vals = data.giants.split(",");
         break;
-        case 'Cardinals':
+        case 'cardinals':
         vals = data.cardinals.split(",");
         break;
-        case 'Rangers':
+        case 'rangers':
         vals = data.rangers.split(",");
         break;
-        case 'Nationals':
+        case 'nationals':
         vals = data.nationals.split(",");
         break;
       case 'base':
