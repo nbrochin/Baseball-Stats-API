@@ -43,7 +43,7 @@ function tamingselect()
 				newli.v=sels[i].getElementsByTagName('option')[j].value;
 				newli.elm=hiddenfield;
 				newli.istrigger=trigger;
-				newa.href='#';
+				// newa.href='#';
 				newa.appendChild(document.createTextNode(
 				sels[i].getElementsByTagName('option')[j].text));
 				newli.onclick=function(){ 
