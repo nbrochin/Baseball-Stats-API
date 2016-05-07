@@ -58,7 +58,7 @@ $("#first-choice").change(function() {
     var $secondChoice = $("#second-choice");
     $secondChoice.empty();
     $.each(vals, function(index, value) {
-      $secondChoice.append("<option>" + value + "</option>");
+      $secondChoice.append("<li>" + value + "</li>");
     });
 
   });
