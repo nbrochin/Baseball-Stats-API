@@ -320,43 +320,91 @@ div.answer-choices ul.answer-text li:last-child i {
   position: relative;
 }*/
 
-ul#question-dots {
-  padding: 0;
-  -webkit-padding-start: 4px !important;
-  margin: 0 36px;
+.dropcontainer {
+position: relative;
+font-size: 16px;
+color: #777;
 }
 
-ul#question-dots li {
-  display: inline;
+.trigger {
+color: #777;
+padding: 10px;
+font-size: 16px;
+width: 50%;
+background: #fff url(../images/select-arrow-open.png) 98% center no-repeat;
+display: block;
+border: 1px solid #ccc;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
 }
 
-ul#question-dots li i {
-  font-size: 18pt;
-  margin: 0px;
-  opacity: 0.75;
-  color: #778DA3;
-  letter-spacing: 0.4em;
+.trigger:hover {
+color: #777;
+background: #f5f5f5 url(../images/select-arrow-open.png) 98% center no-repeat;
 }
 
-.panel-row {
-  display: inline-block;
+.activetrigger {
+color: #777;
+padding: 10px;
+font-size: 16px;
+width: 50%;
+background: #f5f5f5 url(../images/select-arrow-close.png) 98% center no-repeat;
+display: block;
+border: 1px solid #ccc;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
 }
 
-.q-score-css {
-  display: inline;
-  margin: 0 20px;
-  font-size: 2.5em;
-  color: #4C6116;
-  font-weight: 700;
+.activetrigger:hover {
+background: #f5f5f5 url(../images/select-arrow-close.png) 98% center no-repeat;
+color: #777;
 }
 
-.start-game-css {
-  font-weight: 500;
-  display: inline;;
-  color: #7a5aa6;
-  font-size: 36px;
-  margin: 0 20px;
-  float: right;
+.activetrigger:active {
+background: #f5f5f5 url(../images/select-arrow-close.png) 98% center no-repeat;
+color: #777;
+}
+
+.dropcontainer ul {
+font-size: 16px;
+border: 1px solid #ccc;
+border-top: none;
+background: #fff;
+list-style-type: none;
+padding: 10px;
+margin: 0;
+width: 50%;
+z-index: 100;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+.dropcontainer ul li {
+padding: 5px;
+}
+
+.dropcontainer ul li:hover {
+background: #f5f5f5;
+outline: none;
+}
+
+.dropcontainer ul li:first-child {
+display: none;
+}
+
+.dropcontainer ul li:last-child {
+border-bottom: none;
+}
+
+.dropdownhidden {
+display: none;
+}
+
+.dropdownvisible {
+height: auto;
 }
 
 
@@ -449,6 +497,8 @@ p {
   display:inline;
   float:left;
   margin:0;
+  width: 1100px;
+  padding:12px;
 }
 
 @keyframes opacity {
