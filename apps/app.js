@@ -1,5 +1,11 @@
 $(document).ready(function(){
 
+$("#second-choice").change(function() {
+
+    var $dropdown = $(this);
+    var trigger = $dropdown.val();
+    var vals = [];
+    console.log($dropdown);
 
 $(function() {
         var params = {
@@ -13,6 +19,7 @@ $(function() {
             type: "GET",
           
         })
+
 
         .success(function(data) {
             alert("success")
@@ -47,7 +54,7 @@ $(function() {
           })
         });
 
-         
+      });   
 
 //         // .fail(function() {
 //         //     alert("error");
