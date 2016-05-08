@@ -54,7 +54,7 @@ $(function() {
        
 //         // });
        
-//     });
+    });
 
 $("#first-choice").change(function() {
 
