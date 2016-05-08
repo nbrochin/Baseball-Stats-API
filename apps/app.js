@@ -7,7 +7,7 @@ $(function() {
         };
       
         $.ajax({
-            url: "https://api.fantasydata.net/mlb/v2/JSON/Players/OAK?" + $.param(params),
+            url: "https://api.fantasydata.net/mlb/v2/JSON/Players/COL?" + $.param(params),
             dataType: "jsonp",
             type: "GET",
           
@@ -20,7 +20,7 @@ $(function() {
           
           $.each(data, function(i, data) {
               var teamCity = data.City;
-              // console.log(data.Position + ": " + data.FirstName + " " + data.LastName + ",");
+              console.log(data.Position + ": " + data.FirstName + " " + data.LastName + ",");
 
               Name += 'eggs';
               City += 'tuna';
@@ -77,7 +77,7 @@ $("#first-choice").change(function() {
       case 'rockies':
         vals = data.rockies.split(",");
         break;
-        case 'Tigers':
+        case 'tigers':
         vals = data.tigers.split(",");
         break;
       case 'astros':
@@ -90,7 +90,7 @@ $("#first-choice").change(function() {
         vals = data.angels.split(",");
         break;
         case 'dodgers':
-        vals = data.Dodgers.split(",");
+        vals = data.dodgers.split(",");
         break;
       case 'marlins':
         vals = data.marlins.split(",");
