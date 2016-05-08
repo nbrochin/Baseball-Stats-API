@@ -70,30 +70,30 @@ function tamingselect()
 	Turn all ULs with the class defined above into dropdown navigations
 */	
 
-	// var uls=document.getElementsByTagName('ul');
-	// for(var i=0;i<uls.length;i++)
-	// {
-	// 	if(ts_check(uls[i],ts_listclass))
-	// 	{
-	// 		var newform=document.createElement('form');
-	// 		var newselect=document.createElement('select');
-	// 		for(j=0;j<uls[i].getElementsByTagName('a').length;j++)
-	// 		{
-	// 			var newopt=document.createElement('option');
-	// 			newopt.value=uls[i].getElementsByTagName('a')[j].href;	
-	// 			newopt.appendChild(document.createTextNode(uls[i].getElementsByTagName('a')[j].innerHTML));	
-	// 			newselect.appendChild(newopt);
-	// 		}
-	// 		newselect.onchange=function()
-	// 		{
-	// 			window.location=this.options[this.selectedIndex].value;
-	// 		}
-	// 		newform.appendChild(newselect);
-	// 		uls[i].parentNode.insertBefore(newform,uls[i]);
-	// 		toreplace[count]=uls[i];
-	// 		count++;
-	// 	}
-	// }
+	var uls=document.getElementsByTagName('ul');
+	for(var i=0;i<uls.length;i++)
+	{
+		if(ts_check(uls[i],ts_listclass))
+		{
+			var newform=document.createElement('form');
+			var newselect=document.createElement('select');
+			for(j=0;j<uls[i].getElementsByTagName('a').length;j++)
+			{
+				var newopt=document.createElement('option');
+				newopt.value=uls[i].getElementsByTagName('a')[j].href;	
+				newopt.appendChild(document.createTextNode(uls[i].getElementsByTagName('a')[j].innerHTML));	
+				newselect.appendChild(newopt);
+			}
+			newselect.onchange=function()
+			{
+				window.location=this.options[this.selectedIndex].value;
+			}
+			newform.appendChild(newselect);
+			uls[i].parentNode.insertBefore(newform,uls[i]);
+			toreplace[count]=uls[i];
+			count++;
+		}
+	}
 	for(i=0;i<count;i++){
 		toreplace[i].parentNode.removeChild(toreplace[i]);
 	}

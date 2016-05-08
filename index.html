@@ -20,40 +20,16 @@
 	<div id="quiz">
 
 		<header> <!--Header -->	  
-			
 			<!-- QUIZ TOPIC CHOICES -->
-
-
 			<ul class="left-header-box">
-					<li class="app-title">Baseball Player Stats API - <span>choose a team, then choose a player</li>
-					<div class='visible'>
-					<li class="topic-title" data-set="0">DOLPHINS</li>
-					<li class="topic-title" data-set="1">PUMAS</li>
-	 				<li class="topic-title" data-set="2">JAGUARS</li>
-	 				<li class="topic-title" data-set="3">TIGERS</li>
-					</div>
-			</ul>
-
-			<ul class="right-header-box">
-					<li class="total-score">422</li>
+					<h2>MLB player info API</h2>
+					<li class="topic-title">DOLPHINS</li>
 			</ul>
 
 		</header>
-
-
-			<!-- logo text -->
-
-			<section class="control-panel"> <!-- Guessing Section -->
-
-				
-				
-
-	<!-- Questions Section -->
-	  <div class="trivia-questions"> 
-				<section id="QA-holder">
-	  
-			<div class="answer-choices">
-				<form class="2016mlbteams">
+		<section class="dropdown-strip">
+			<table>
+				<tr><td><form class="2016mlbteams">
 					<p>
 						<label class="label">MLB Teams 2016:</label>
 						<select id="first-choice" class="turnintodropdown_demo2" >
@@ -91,8 +67,8 @@
 						</select>
 					</p>
 				</form>
-			<br />
-			<form class="2016mlbPlayers">
+			</td>
+			<td><form class="2016mlbPlayers">
 					<p>
 						<label class="label">MLB Players 2016:</label>
 						<select id="second-choice" class="turnintodropdown_demo2">
@@ -100,10 +76,53 @@
 								
 						</select>
 					</p>
-				</form>
+				</form></td><td><button class="btn btn-danger">go</button>
+			</tr>
+			</table>
+		
+				
+		</section>
+
+			<!-- logo text -->
+
+			<section class="player-team"> 
+				<div class="top-data-section">
+					<h2>Aledmys Diaz #25   |  <span class="city-team-name">St. Louis Cardinals</span></h2>
+				
+	  			<div class="yr-selector">2016&nbsp;&nbsp;2015 </div>
+	  			<table class="season-stats">
+	  				<tr>
+		  				<th>Games</th>
+		  				<th>ABs</th>
+		  				<th>Hits</th>
+		  				<th>RBIs</th>
+		  				<th>Average</th>
+		  				<th>SLG</th>
+		  				<th>OPS</th>
+		  				<th>OBA</th>
+		  			</tr>
+		  			<tr>
+		  				<td class="Games">24</td>
+		  				<td class="AtBats">80</td>
+		  				<td class="Hits">31</td>
+		  				<td class="RunsBattedIn"></td>
+		  				<td class="BattingAverage"></td>
+		  				<td class="SluggingPercentage"></td>
+		  				<td class="OnBasePlusSlugging"></td>
+		  				<td class="OnBasePercentage"></td>
+		  			</tr>
+		  		</table>
+	  		</section>
+
+			<section id="QA-holder"></section>	
+	  			</div>
+			
+				
+			<br />
+			
 			<div id="search-results"></div>
 				
-			</section>	
+			
 			</div>
 		</section>
 		</section>
@@ -128,7 +147,7 @@
 	<!-- JavaScript -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-	<!-- 		<script type="text/javascript" src="apps/select_demo2.js"></script>
+<!-- 		<script type="text/javascript" src="apps/select_demo2.js"></script>
  -->		<script type="text/javascript" src="apps/app.js"></script>
 		
 

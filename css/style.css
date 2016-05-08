@@ -30,8 +30,6 @@ input {
 
 body {
 	position: relative;
-	width: 98%;
-	margin: 0.8em auto;
 	font-family: 'Lato', Calibri, Arial, sans-serif;
 	background-color: #ffffff;
   background-repeat: no-repeat;
@@ -110,8 +108,19 @@ ul li {
 
 header {
 	position: relative;
-	height: 30%;
-	padding: 1em;
+	height: 166px;
+}
+
+header h2{
+  font-size: 60px;
+  color: #ffffff;
+  text-align: center;
+}
+
+header ul span {
+  font-size: 34px;
+  line-height: 60px;
+  color: yellow;
 }
 
 header ul li {
@@ -121,22 +130,11 @@ header ul li {
 }
 
 header ul.left-header-box {
-	float: left;
-  margin: 10px 20px 0 40px;
-  border-radius: 12px;
-  background-color: #910e1c;
-  width: 880px;
-  padding: 32px;
+  background-color: #6699ff;
+  width: 100%;
+  padding: 8px;
 }
 
-header ul.right-header-box {
-	float: left;
-  margin: 10px 20px 0 0px;
-  border-radius: 12px;
-  background-color: #910e1c;
-  width: 210px;
-  padding: 15px;
-}
 
 header ul li.app-title {
   font-size: 28px;
@@ -164,7 +162,6 @@ header ul li.topic-title {
   font-family: 'Museo Slab', 'Lato', serif;
   font-weight: 500;
   overflow: hidden;
-  animation:12s linear 0.5s normal none infinite change;
 }
 
 header ul li.total-score {
@@ -195,9 +192,18 @@ h1 {
   text-align: center;
 }
 
-p.thumb-spacing {
-  padding: 12px;
+.dropdown-strip {
+  padding: 18px;
+  height: 160px;
+  background-color: #222222;
+  display: inline-block;
+  width: 100%;
 }
+
+.2016mlbPlayers {
+  float: right;
+}
+  
 
 .close {
   float:right;
@@ -208,18 +214,33 @@ p.thumb-spacing {
    QUESTION AND ANSWER CHOICES
 ---------------------------------------------------------------------------------*/
 
-.control-panel {
-	background-color: #eeeeee;
-	width: 1110px;
-  margin: 15px 20px 0 54px;
+.player-team {
+	background-color: pink;
+	width: 100%;
   padding: 25px;
   min-height: 200px;
   box-sizing: border-box;
   display: inline-block;
-  border-radius: 12px;
   z-index: 000;
 }
 
+section.player-team h2 {
+  font-size: 46px;
+  line-height: 54px;
+  color: #222222 !important;
+}
+
+section.player-team h2 span {
+  font-size: 26px;
+  line-height: 54px;
+  color: #882222;
+  margin-left:10px;
+}
+
+.top-line-info {
+  margin: 0px 20px;
+}
+  
 .trivia-questions {
 	width: auto;;
   padding: 9px;
@@ -241,22 +262,41 @@ p.thumb-spacing {
   text-align:left;
 }
 
-.answer-choices {
-  font-size: 24px;
-  font-weight: 500;
+.yr-selector {
+  border-top: 3px solid #222222;
   font-family: 'Lato' !important;
-  z-index: 999;
-  color: #333333;
-  text-align:left;
+  color: #839c9a;
+  font-size: 18px;
+  text-align: left;
+  float: left;
+  width: 100%;
   line-height: 30px;
+  margin-bottom: 18px;
 }
 
-.answer-choices ul i {
-  color: #aaaaaa;
-  text-align: right;
+table.season-stats {
+  background-color: #aaaaaa;
+  width: 100%;
 }
 
-ul.answer-text:first-child  {
+table.season-stats th {
+  background-color: #222222;
+  padding:10px;
+  color: #ffffff;
+  font-weight: 500;
+  text-align: center;
+  font-size: 22px;
+}
+
+table.season-stats td {
+  padding:10px;
+  color: #222222;
+  font-weight: 500;
+  text-align: center;
+  font-size: 46px;
+}
+
+ul.season-text:first-child  {
   color: #555555;
   text-align: left;
   font-size: 16px;
@@ -264,7 +304,7 @@ ul.answer-text:first-child  {
   font-family: 'Lato', sans-serif;
 }
 
-ul.answer-text li p  {
+ul.season-text li p  {
   color: #555555;
   text-align: left;
   font-size: 16px;
@@ -272,27 +312,25 @@ ul.answer-text li p  {
   font-weight: 300;
 }
 
-ul.answer-text:last-child  {
+ul.season-text:last-child  {
   color: #555555;
   text-align: left;
 }
 
-.answer-text li span {
+.season-text li span {
   font-weight: 500;
   margin-left: 20px;
 }
 
 #quiz {
-  background-color: ;
-  display: inherit;
-  z-index: 444;
+ 
 }
 
-.answer-text em {
+.season-text em {
   font-weight: 300;
 }
 
-.answer-text li {
+.season-text li {
   font-size: 30px;
   font-weight: 500;
   font-family: 'Museo Slab';
@@ -496,8 +534,8 @@ footer ul li.high-score {
 p {
   display:inline;
   float:left;
-  margin:0;
-  width: 1100px;
+  margin-left: 50px;
+  width: 540px;
   padding:12px;
 }
 
