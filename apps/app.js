@@ -7,12 +7,12 @@ $(function() {
 
         };
       
-        // $.ajax({
-        //     url: "https://api.fantasydata.net/mlb/v2/JSON/PlayerSeasonStatsByPlayer/2016/10000031?" + $.param(params),
-        //     dataType: "jsonp",
-        //     type: "GET",
+        $.ajax({
+            url: "https://api.fantasydata.net/mlb/v2/JSON/PlayerSeasonStatsByPlayer/2016/10000031?" + $.param(params),
+            dataType: "jsonp",
+            type: "GET",
           
-        // })
+        })
 
         .success(function(data) {
             alert("success")
@@ -160,7 +160,7 @@ $("#first-choice").change(function() {
     var $secondChoice = $("#second-choice");
     $secondChoice.empty();
     $.each(vals, function(index, value) {
-      // $secondChoice.append("<li>" + value + "</li>");
+      $secondChoice.append("<li>" + value + "</li>");
     });
 
   });
