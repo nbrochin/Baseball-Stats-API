@@ -58,6 +58,12 @@
   max-height: 180px;
   overflow: auto;
 }
+
+.jq-dropdown-scroll {
+  max-height: 180px;
+  overflow: auto;
+}
+
 .jq-dropdown .jq-dropdown-menu li {
   list-style: none;
   padding: 0 0;

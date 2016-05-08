@@ -118,16 +118,13 @@
 	padding: 10px;
 	font-size: 16px;
 	width: 97%;
+	height: 36px;
 	background: #fff url(../images/select-arrow-open.png) 98% center no-repeat;
 	display: block;
-	border: 1px solid #ccc;
+	border: 1px solid #444;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	-webkit-transition: all 0.5s ease;
-	-moz-transition: all 0.5s ease;
-	-o-transition: all 0.5s ease; 
-	transition: all 0.5s ease;
 	}
 
 .trigger_demo2:hover {
