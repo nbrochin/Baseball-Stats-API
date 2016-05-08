@@ -160,7 +160,7 @@ $("#first-choice").change(function() {
     var $secondChoice = $("#second-choice");
     $secondChoice.empty();
     $.each(vals, function(index, value) {
-      $secondChoice.append("<li>" + value + "</li>");
+      $secondChoice.append("<option>" + value + "</option>");
     });
 
   });
