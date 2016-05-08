@@ -14,6 +14,7 @@
 		<link rel="stylesheet" href="css/style.css"/>
 		<link rel="stylesheet" href="css/style2.css"/>
 		<link rel="stylesheet" href="css/generic.css"/>
+		<link type="text/css" rel="stylesheet" href="css/jquery-dropdown.css" />
 
 	</head>
 	<body>
@@ -29,54 +30,19 @@
 		</header>
 		<section class="dropdown-strip">
 			<table>
-				<tr><td><form class="2016mlbteams">
-					<p>
-						<label class="label">MLB Teams 2016:</label>
-						<select id="first-choice" class="turnintodropdown_demo2" >
-							<option value="">Please select a team:</option>
-								<option value="orioles">Baltimore</option>
-               					<option value="redSox">Boston</option>
-                				<option value="yankees">New York</option>
-              				 	<option value="rays">Tampa Bay</option>
-                				<option value="blueJays">Toronto</option>
-                				<option value="whiteSox">Chi White Sox</option>
-                				<option value="indians">Cleveland</option>
-                				<option value="tigers">Detroit</option>
-				                <option value="royals">Kansas City</option>
-				                <option value="twins">Minnesota</option>
-				  				<option value="astros">Houston</option>
-				  				<option value="angels">LA Angels</option>
-				  				<option value="athletics">Oakland</option>
-				  				<option value="mariners">Seattle</option>
-				  				<option value="rangers">Texas</option>
-				  				<option value="braves">Atlanta</option>
-				  				<option value="marlins">Miami</option>
-				  				<option value="mets">NY Mets</option>
-				  				<option value="phillies">Philadelphia</option>
-				  				<option value="nationals">Washington</option>
-				  				<option value="cubs">Chi Cubs</option>
-				  				<option value="reds">Cincinatti</option>
-				  				<option value="brewers">Milwaulkee</option>
-				  				<option value="pirates">Pittsburgh</option>
-				  				<option value="cardinals">St. Louis</option>
-				  				<option value="diamondBacks">Arizona</option>
-				  				<option value="rockies">Colorado</option>
-				  				<option value="dodgers">LA Dodgers</option>
-				  				<option value="padres">San Diego</option>
-				  				<option value="giants">San Francisco</option>
-						</select>
-					</p>
-				</form>
-			</td>
-			<td><form class="2016mlbPlayers">
-					<p>
-						<label class="label">MLB Players 2016:</label>
-						<select id="second-choice" class="turnintodropdown_demo2">
-							<option value="">Please select a team first:</option>
-								
-						</select>
-					</p>
-				</form></td><td><button class="btn btn-danger">go</button>
+				<tr>
+				<td>
+					<p><select id="first-choice" class="trigger_demo2" data-jq-dropdown="#jq-dropdown-3">MLB Teams 2016:</a></p>	
+						<option value="orioles">orioles</option>
+						<option value="RedSox">RedSox</option>	
+						</select>	
+				</td>
+			<td>
+					<p><a href="#" class="trigger_demo2" data-jq-dropdown="#jq-dropdown-2">MLB Players 2016:</a></p>
+						<select id="second-choice" class="jq-dropdown-menu"></select>
+					<option>Please Choose a Team</option>
+					
+				</td><td><button class="btn btn-danger">go</button>
 			</tr>
 			</table>
 		
@@ -114,7 +80,8 @@
 		  		</table>
 	  		</section>
 
-			<section id="QA-holder"></section>	
+			<section id="QA-holder">
+			</section>	
 	  			</div>
 			
 				
@@ -148,10 +115,58 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 <!-- 		<script type="text/javascript" src="apps/select_demo2.js"></script>
- -->		<script type="text/javascript" src="apps/app.js"></script>
+ -->		<script type="text/javascript" src="apps/jquery-dropdown.js"></script>
+ 			<script type="text/javascript" src="apps/app.js"></script>
 		
-
 		
+		<div id="jq-dropdown-3" class="jq-dropdown jq-dropdown-tip jq-dropdown-scroll">
+						<!-- <div id="first-choice"> -->
+						 <select id="first-choice" class="jq-dropdown-menu">
+						
+<!-- 						<select id="first-choice" class="turnintodropdown_demo2" >
+ -->							
+								<li><a href="#1" value="redSox">Boston</a></li>
+                				<li><a href="#1" value="yankees">New York</a></li>
+              				 	<li><a href="#1" value="rays">Tampa Bay</a></li>
+                				<li><a href="#1" value="blueJays">Toronto</a></li>
+                				<li><a href="#1" value="whiteSox">Chi White Sox</a></li>
+                				<li><a href="#1" value="indians">Cleveland</a></li>
+                				<li><a href="#1" value="tigers">Detroit</a></li>
+				                <li><a href="#1" value="royals">Kansas City</a></li>
+				                <li><a href="#1" value="twins">Minnesota</a></li>
+				  				<li><a href="#1" value="astros">Houston</a></li>
+				  				<li><a href="#1" value="angels">LA Angels</a></li>
+				  				<li><a href="#1" value="athletics">Oakland</a></li>
+				  				<li><a href="#1" value="mariners">Seattle</a></li>
+				  				<li><a href="#1" value="rangers">Texas</a></li>
+				  				<li><a href="#1" value="braves">Atlanta</a></li>
+				  				<li><a href="#1" value="marlins">Miami</a></li>
+				  				<li><a href="#1" value="mets">NY Mets</a></li>
+				  				<li><a href="#1" value="phillies">Philadelphia</a></li>
+				  				<li><a href="#1" value="nationals">Washington</a></li>
+				  				<li><a href="#1" value="cubs">Chi Cubs</a></li>
+				  				<li><a href="#1" value="reds">Cincinatti</a></li>
+				  				<li><a href="#1" value="brewers">Milwaulkee</a></li>
+				  				<li><a href="#1" value="pirates">Pittsburgh</a></li>
+				  				<li><a href="#1" value="cardinals">St. Louis</a></li>
+				  				<li><a href="#1" value="diamondBacks">Arizona</a></li>
+				  				<li><a href="#1" value="rockies">Colorado</a></li>
+				  				<li><a href="#1" value="dodgers">LA Dodgers</a></li>
+				  				<li><a href="#1" value="padres">San Diego</a></li>
+				  				<li><a href="#1" value="giants">San Francisco</a></li>
+						</select>
+						</div>
+		</div>
+		<div id="jq-dropdown-3" class="jq-dropdown jq-dropdown-tip jq-dropdown-scroll">
+						 <select id="second-choice" class="jq-dropdown-menu">
+						
+<!-- 						<select id="first-choice" class="turnintodropdown_demo2" >
+ -->							
+							<option>Please select a team</option>
+							
+						</select>
+		</div>
+			
 	</body>
 </html>
 

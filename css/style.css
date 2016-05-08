@@ -488,14 +488,14 @@ h3 {
 }
 
 footer {
-	position: relative;
 	height: 30%;
 	padding: 1em;
+  width: 100%;
+  background-color: #910e1c;
 }
 
 footer ul.footer-box {
   margin: 5px 20px 0 35px;
-  border-radius: 12px;
   background-color: #910e1c;
   width: 1110px;
   height: 100px;
