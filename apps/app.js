@@ -1,11 +1,12 @@
 $(document).ready(function(){
 
-$("#second-choice").change(function() {
+$("#first-choice").change(function() {
 
     var $dropdown = $(this);
     var trigger = $dropdown.val();
     var vals = [];
-    console.log('#first-choice').val();
+    var oValue = $('#first-choice option:selected').text();
+    console.log(oValue);
 
 $(function() {
         var params = {
