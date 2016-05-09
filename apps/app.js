@@ -5,7 +5,7 @@ $("#second-choice").change(function() {
     var $dropdown = $(this);
     var trigger = $dropdown.val();
     var vals = [];
-    console.log($dropdown);
+    console.log('#first-choice').val();
 
 $(function() {
         var params = {
