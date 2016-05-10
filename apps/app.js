@@ -22,16 +22,29 @@ $(function() {
          })
 
         .success(function(data) {
+          // alert("success")
+          console.log(data[6].PlayerID);
+          console.log(data[9].FirstName);
             var key = $dropdown.val();
             var vals = [];
-            var Name = data.Name;
+            var Name = data.FirstName + ' ' + data.LastName;
             var PID = data.PlayerID;
+
+          // switch(key) {
+          //   case 'COL':
+          //   vals = data.PlayerID.split(":");
+          // }
+            
             var $secondChoice = $("#second-choice");
-            $secondChoice.empty();
-            $.each(vals, function(index, value) {
-            $secondChoice.append("<option value=" + PID + ">" + Name + "</option>");
-          })
-          })
+            $secondChoice.empty();  
+
+            var newValues = "";
+            $("#second-choice").append("<option>Please Choose a Player...</option>");
+            for (var i = 0; i < data.length; i++) {
+              newValues+= $("#second-choice").append("<option value=" + data[i].PlayerID + ">" + data[i].FirstName + " " + data[i].LastName + "</option>");
+          }
+
+          }) 
 });
 
 
@@ -40,18 +53,23 @@ $("#second-choice").change(function() {
     var $dropdown = $(this);
     var trigger = $dropdown.val();
     var vals = [];
-    var PID2 = $('#second-choice').val();
-    console.log(PID2);
 
 })
 
+$('#idGo').click(function playerData () {
+  var PID2 = $('#second-choice').val();
+});
+  
+  PID2 = $('#second-choice').val();
 
 $(function() {
         var params = {
         key: "bb32e0f1b71046f4a5844dc55af9e844",
 
         };
-      
+
+        
+
         $.ajax({
             url: "https://api.fantasydata.net/mlb/v2/JSON/PlayerSeasonStatsByPlayer/2016/" + PID2 + "?" + $.param(params),
             dataType: "jsonp",
@@ -73,15 +91,11 @@ $(function() {
             var OnBasePercentage = data.OnBasePercentage.toFixed(3);
 
 
-          })
-          
-    });
+         
+            console.log(PID2);
+
           
           $.each(data, function(i, data) {
-              // console.log(data.PlayerID + ": " + data.FirstName + " " + data.LastName + ",");
-              // console.log(data);
-              // Name += 'eggs';
-              // City += 'tuna';
               
               $('div.top-data-section h2').text(Name);
               $('div.top-data-section h2 span .city-team-name').text(Team);
@@ -94,10 +108,12 @@ $(function() {
               $('table.season-stats td.OnBasePlusSlugging').text(OnBasePlusSlugging);
               $('table.season-stats td.OnBasePercentage').text(OnBasePercentage);
           })
-        });
+          })
+        })
+  });
+  });
 
-      });   
-
+  
 //         // .fail(function() {
 //         //     alert("error");
        
