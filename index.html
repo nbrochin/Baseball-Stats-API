@@ -18,14 +18,14 @@
 
 	</head>
 	<body>
-	<div id="quiz">
+	<div id="stats">
 
 		<header> <!--Header -->	  
 			<!-- QUIZ TOPIC CHOICES -->
-			<ul class="left-header-box">
+			<div class="left-header-box">
 					<h2>MLB player info API</h2>
-					<li class="topic-title">DOLPHINS</li>
-			</ul>
+					
+			</div>
 
 		</header>
 		<section class="dropdown-strip">
@@ -85,48 +85,76 @@
 				
 		</section>
 
-			<!-- logo text -->
+		<section class="player-team"> 
 
-			<section class="player-team"> 
 				<div class="top-data-section">
-					<h2>Aledmys Diaz #25   |  <span class="city-team-name">St. Louis Cardinals</span></h2>
+					<span class="playerPhoto"></span><span class="playerName">Aledmys Diaz</span><span class="playerNumber"> #25</span><span class="vDivider">|</span><span class="city-team-name">St. Louis Cardinals</span></h2>
 				
-	  			<div class="yr-selector">2016&nbsp;&nbsp;2015 </div>
-	  			<table class="season-stats">
-	  				<tr>
-		  				<th>Games</th>
-		  				<th>ABs</th>
-		  				<th>Hits</th>
-		  				<th>RBIs</th>
-		  				<th>Average</th>
-		  				<th>SLG</th>
-		  				<th>OPS</th>
-		  				<th>OBA</th>
-		  			</tr>
-		  			<tr>
-		  				<td class="Games">24</td>
-		  				<td class="AtBats">80</td>
-		  				<td class="Hits">31</td>
-		  				<td class="RunsBattedIn"></td>
-		  				<td class="BattingAverage"></td>
-		  				<td class="SluggingPercentage"></td>
-		  				<td class="OnBasePlusSlugging"></td>
-		  				<td class="OnBasePercentage"></td>
-		  			</tr>
-		  		</table>
+	  			<div class="yr-selector"><span class="16">2016</span> &nbsp;&nbsp;<span class="15">2015</span> </div>
 	  		</section>
+	  			<div class ="">
+		  			<table class="batter-season-stats">
+		  			  <tbody>
+		  				<tr>
+			  				<th>Games</th>
+			  				<th>ABs</th>
+			  				<th>Hits</th>
+			  				<th>RBIs</th>
+			  				<th>Average</th>
+			  				<th>SLG</th>
+			  				<th>OPS</th>
+			  				<th>OBA</th>
+			  			</tr>
+			  			<tr>
 
-			<section id="QA-holder">
+			  				<td class="Games">24</td>
+			  				<td class="AtBats">80</td>
+			  				<td class="Hits">31</td>
+			  				<td class="RunsBattedIn"></td>
+			  				<td class="BattingAverage"></td>
+			  				<td class="SluggingPercentage"></td>
+			  				<td class="OnBasePlusSlugging"></td>
+			  				<td class="OnBasePercentage"></td>
+			  			</tr>
+			  			</tbody>
+			  		</table>
+			  		<table class="pitcher-season-stats">
+			  			<tbody>
+		  				<tr>
+			  				<th>Games</th>
+			  				<th>Wins</th>
+			  				<th>Losses</th>
+			  				<th>InningsPitched</th>
+			  				<th>ERA</th>
+			  				<th>Walks</th>
+			  				<th>Hits</th>
+			  				<th>BAA</th>
+			  			</tr>
+			  			<tr>
+			  				<td class="Games">24</td>
+			  				<td class="Wins">80</td>
+			  				<td class="Losses">31</td>
+			  				<td class="IP"></td>
+			  				<td class="ERA"></td>
+			  				<td class="pWalks"></td>
+			  				<td class="pHits"></td>
+			  				<td class="BAA"></td>
+			  			</tr>
+			  		</tbody>
+			  		</table>
+	  			</div>
+
+			<section id="image-search-holder">
+				<div class="search-results"></div>
+					
+				</div>
 			</section>	
 	  			</div>
 			
 				
 			<br />
 			
-			<div id="search-results"></div>
-				
 			
-			</div>
 		</section>
 		</section>
 		<footer>
@@ -135,12 +163,12 @@
 			<ul class="footer-box">
 					<input type="hidden" id="pageToken" value="">
                         <li class="app-instructions" role="group">
-                          <button type="button" id="pageTokenPrev" value="" class="btn btn-default">PREV</button>
+                          <button type="button" id="pageTokenPrev" class="btn btn-warning">get images</button>
                          <li class="app-instructions" role="group">
-                          <button type="button" id="pageTokenNext" value="" class="btn btn-default">NEXT</button>
+                          <button type="button" id="pageTokenNext" class="btn btn-danger">get salary info</button>
                         
 					
-					<li class="high-score" id="total-results-container">TOTAL RESULTS:</li>
+					<!-- <li class="high-score" id="total-results-container">TOTAL RESULTS:</li> -->
 					
 					
     				

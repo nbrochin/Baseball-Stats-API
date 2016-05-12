@@ -46,9 +46,9 @@ body {
     border-top: 1px solid #ccc;
 }
 
-#QA-holder {
+#image-search-holder {
   background-color: #eeeeee;
-  width: 1070px;
+  width: 100%;
   margin: 0 auto;
   padding: 5px;
   box-sizing: border-box;
@@ -57,7 +57,7 @@ body {
   z-index: 999;
 }
 
-#QA-holder span{
+#image-search-holder span{
   font-size: 14px;
   text-align: center;
 }
@@ -108,19 +108,17 @@ ul li {
 
 header {
 	position: relative;
-	height: 166px;
+	height: 100px;
+  background-color: #910e1c;
+  padding: 12px;
 }
 
-header h2{
-  font-size: 60px;
+header h2 {
+  font-size: 50px;
   color: #ffffff;
-  text-align: center;
-}
+  text-align: left;
+  margin-left: 25px;
 
-header ul span {
-  font-size: 34px;
-  line-height: 60px;
-  color: yellow;
 }
 
 header ul li {
@@ -129,45 +127,9 @@ header ul li {
   color: #910e1c;
 }
 
-header ul.left-header-box {
-  background-color: #6699ff;
-  width: 100%;
-  padding: 8px;
-}
-
-
-header ul li.app-title {
-  font-size: 28px;
-  color: #45d0c1;
-  text-align: left;
-  margin-left: 25px;
-}
-
-header ul li.app-title span {
-  font-size: 28px;
-  color: #f0ad4e;
-  text-align: left;
-  font-weight: 100;
-}
-
-
-header ul li.topic-title {
-  font-size: 50px;
-  color: #ffffff;
-  text-align: left;
-  text-transform: uppercase;
-  margin-left: 25px;
-  transform: translate(-100%, -80%);
-  line-height: 55px;
-  font-family: 'Museo Slab', 'Lato', serif;
-  font-weight: 500;
-  overflow: hidden;
-}
-
-header ul li.total-score {
-  font-size: 88px;
-  color: #45d0c1;
-  text-align: center;
+header .left-header-box {
+  background-color: #910e1c;
+ 
 }
 
 h1 {
@@ -195,7 +157,7 @@ h1 {
 .dropdown-strip {
   padding: 18px;
   height: 160px;
-  background-color: #222222;
+  background-color: #1f243d;
   display: inline-block;
   width: 100%;
 }
@@ -215,22 +177,35 @@ h1 {
 ---------------------------------------------------------------------------------*/
 
 .player-team {
-	background-color: pink;
+	background-color: #cecece;
 	width: 100%;
   padding: 25px;
-  min-height: 200px;
+  min-height: 160px;
   box-sizing: border-box;
   display: inline-block;
   z-index: 000;
 }
 
-section.player-team h2 {
+span.playerName {
   font-size: 46px;
   line-height: 54px;
   color: #222222 !important;
 }
 
-section.player-team h2 span {
+span.playerNumber {
+  font-size: 46px;
+  line-height: 54px;
+  color: #223332 !important;
+}
+
+span.vDivider {
+  font-size: 42px;
+  line-height: 54px;
+  margin: 0px 8px 0px 12px;
+  color: #888888 !important;
+}
+
+span.city-team-name {
   font-size: 26px;
   line-height: 54px;
   color: #882222;
@@ -271,15 +246,16 @@ section.player-team h2 span {
   float: left;
   width: 100%;
   line-height: 30px;
-  margin-bottom: 18px;
+  margin-bottom: 14px;
 }
 
-table.season-stats {
-  background-color: #aaaaaa;
+table.batter-season-stats, table.pitcher-season-stats {
+  background-color: #ffffff;
   width: 100%;
+  display: none;
 }
 
-table.season-stats th {
+table.batter-season-stats th, table.pitcher-season-stats th {
   background-color: #222222;
   padding:10px;
   color: #ffffff;
@@ -288,7 +264,7 @@ table.season-stats th {
   font-size: 22px;
 }
 
-table.season-stats td {
+table.batter-season-stats td, table.pitcher-season-stats td {
   padding:10px;
   color: #222222;
   font-weight: 500;
@@ -443,17 +419,6 @@ display: none;
 
 .dropdownvisible {
 height: auto;
-}
-
-
-.question-01 {
-	font-size: 36px;
-	font-weight: 500;
-	display: inline-block;;
-	line-height: 1em;
-	color: #7a5aa6;
-  text-align: left;
-  margin: 0 20px 0 20px;
 }
 
 .btn-primary {
