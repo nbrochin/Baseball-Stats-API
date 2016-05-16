@@ -24,14 +24,14 @@ $(function() {
 
         .success(function(data) {
           // alert("success")
-          console.log(data[6].PlayerID);
-          console.log(data[9].FirstName);
+          // console.log(data[6].PlayerID);
+          // console.log(data[9].FirstName);
             var key = $dropdown.val();
             var vals = [];
             var Name = data.FirstName + ' ' + data.LastName;
             var PID = data.PlayerID;
-            // var photoURL = data.photoUrl
-            // var salary = data.Salary;
+            var salary = {};
+            var formSalary = salary.formula
          
 
             var $secondChoice = $("#second-choice");
@@ -41,22 +41,28 @@ $(function() {
             // var salaries = "";
             $("#second-choice").append("<option>Please Choose a Player...</option>");
             for (var i = 0; i < data.length; i++) {
+              salary[data[i].PlayerID] = data[i].Salary;
               newValues+= $("#second-choice").append("<option value=" + data[i].PlayerID + ">" + data[i].FirstName + " " + data[i].LastName + "</option>");
               // salary+= $("ul.footer-box").append(data[i].salary);
 
           }
 
-
-        })
-});
-
-
-            $("#second-choice").change(function() {
+          $("#second-choice").change(function() {
 
                 var $dropdown = $(this);
                 var trigger = $dropdown.val();
                 var vals = [];
                 var PID2 = $('#second-choice').val();
+                
+                function toUSD(number) {
+                var number = number.toString(), 
+                dollars = number.split('.')[0], 
+                cents = (number.split('.')[1] || '') +'00';
+                dollars = dollars.split('').reverse().join('')
+                    .replace(/(\d{3}(?!$))/g, '$1,')
+                    .split('').reverse().join('');
+                return '$' + dollars + '.' + cents.slice(0, 2);
+                }
 
            
 
@@ -82,30 +88,42 @@ $(function() {
   
 
            .success(function(data) {
-                alert("success")
 
-            var Name = data.Name;
-            var Team = data.Team;
-            var Games = data.Games;
-            var AtBats = data.AtBats;
-            var Hits = data.Hits;
-            var RBI = data.RunsBattedIn;
-            var BattingAverage = data.BattingAverage.toFixed(3);
-            var SLG = data.SluggingPercentage.toFixed(3);
-            var OPS = data.OnBasePlusSlugging.toFixed(3);
-            var OnBasePercentage = data.OnBasePercentage.toFixed(3);
-            var Wins = data.Wins;
-            var Losses = data.Losses;
-            var IP = data.InningsPitchedDecimal;
-            var ERA = data.EarnedRunAverage.toFixed(2);
-            var pWalks = data.PitchingWalks;
-            var pHits = data.PitchingHits;
-            var BAA = data.PitchingBattingAverageAgainst.toFixed(3);
-      
+            var Name = data.Name, 
+                Team = data.Team,
+                Games = data.Games,
+                AtBats = data.AtBats,
+                Hits = data.Hits,
+                RBI = data.RunsBattedIn,
+                BattingAverage = data.BattingAverage.toFixed(3),
+                SLG = data.SluggingPercentage.toFixed(3),
+                OPS = data.OnBasePlusSlugging.toFixed(3),
+                OnBasePercentage = data.OnBasePercentage.toFixed(3),
+                Wins = data.Wins,
+                Losses = data.Losses,
+                IP = data.InningsPitchedDecimal,
+                ERA = data.EarnedRunAverage.toFixed(2),
+                pWalks = data.PitchingWalks,
+                pHits = data.PitchingHits,
+                BAA = data.PitchingBattingAverageAgainst.toFixed(3),
+                Salary = salary[PID2];
+
+                function toUSD(number) {
+                var number = number.toString(), 
+                dollars = number.split('.')[0], 
+                cents = (number.split('.')[1] || '') +'00';
+                dollars = dollars.split('').reverse().join('')
+                    .replace(/(\d{3}(?!$))/g, '$1,')
+                    .split('').reverse().join('');
+                return '$' + dollars;
+                }
 
             if (data.PositionCategory == "P") {
-                console.log(data.PositionCategory);
+                // console.log(data.PositionCategory);
                 $('table.pitcher-season-stats').show();
+                $('table.batter-season-stats').hide();
+
+
            
                 $('div.yr-selector span.16').css({
                   color: 'white',
@@ -115,6 +133,7 @@ $(function() {
                 $('div.top-data-section span.playerPhoto').html("<img src='http://static.fantasydata.com/headshots/mlb/low-res/" + PID2 + ".png'" + ">");
                 $('div.top-data-section span.playerName').text(Name);
                 $('div.top-data-section span.city-team-name').text(Team);
+                $('div.top-data-section span.playerSalary').text(toUSD(Salary));
                 $('td.Games').text(Games);
                 $('td.Wins').text(Wins);
                 $('td.Losses').text(Losses);
@@ -127,6 +146,7 @@ $(function() {
             } else  {
 
                 $('table.batter-season-stats').show();
+                $('table.pitcher-season-stats').hide();
     
                 $('div.yr-selector span.16').css({
                   color: 'white',
@@ -144,11 +164,15 @@ $(function() {
                 $('td.SluggingPercentage').text(SLG);
                 $('td.OnBasePlusSlugging').text(OPS);
                 $('td.OnBasePercentage').text(OnBasePercentage);
+
             
             }
           })
           })
           })
+
+        })
+});
             // alert("success")
             // console.log(PID2);
 

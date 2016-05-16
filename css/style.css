@@ -192,6 +192,12 @@ span.playerName {
   color: #222222 !important;
 }
 
+span.playerSalary {
+  font-size: 46px;
+  line-height: 54px;
+  color: #076961 !important;
+}
+
 span.playerNumber {
   font-size: 46px;
   line-height: 54px;
