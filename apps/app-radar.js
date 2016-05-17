@@ -14,16 +14,16 @@ $(function getRequest () {
 
         // };
       
-       $.getJSON({
+       $.ajax({
             url: "http://api.sportradar.us/mlb-t5/seasontd/2016/REG/teams/1d678440-b4b1-4954-9b39-70afb3ebbcfa/statistics.json?api_key=pfqnd9eqk9j4jjc7au287rdt",
             dataType: "jsonp",
-            type: "GET",
+            type: "GET"
             // crossDomain: true,
             // xhrFields: {
             //     withCredentials: true
             // }
 
-         })
+         });
 
         .success(function(data) {
           // alert("success")
