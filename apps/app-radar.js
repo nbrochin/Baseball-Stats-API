@@ -16,8 +16,8 @@ $(function() {
       
         $.ajax({
             url: "http://api.sportradar.us/mlb-t5/seasontd/2016/REG/teams/1d678440-b4b1-4954-9b39-70afb3ebbcfa/statistics.json?api_key=pfqnd9eqk9j4jjc7au287rdt",
-            dataType: "jsonp",
-            type: "GET",
+            // dataType: "jsonp",
+            // type: "GET",
 
 // http://api.sportradar.us/mlb-t5/seasontd/2016/REG/teams/1d678440-b4b1-4954-9b39-70afb3ebbcfa/statistics.json?api_key=pfqnd9eqk9j4jjc7au287rdt
 
@@ -80,8 +80,8 @@ $(function() {
                 console.log(PID2);
                 $.ajax({
                         url: "https://api.sportradar.us/mlb-t5/seasontd/2016/REG/teams/" + team_id + "/statistics.json?api_key=pfqnd9eqk9j4jjc7au287rdt",
-                        dataType: "jsonp",
-                        type: "GET",
+                        // dataType: "jsonp",
+                        // type: "GET",
                       
                 })
           
