@@ -23,7 +23,7 @@ $(function getRequest () {
             //     withCredentials: true
             // }
 
-         });
+         })
 
         .success(function(data) {
           // alert("success")
