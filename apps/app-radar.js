@@ -21,7 +21,7 @@ $(function() {
             // crossDomain: true,
             // xhrFields: {
             //     withCredentials: true
-            }
+            // }
 
          })
 
