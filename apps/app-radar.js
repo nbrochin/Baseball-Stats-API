@@ -18,15 +18,15 @@ $(function() {
             url: "https://api.sportradar.us/mlb-t5/seasontd/2016/REG/teams/1d678440-b4b1-4954-9b39-70afb3ebbcfa/statistics.json?api_key=pfqnd9eqk9j4jjc7au287rdt",
             // dataType: "jsonp",
             // type: "GET",
-            // crossDomain: true,
-            // xhrFields: {
-            //     withCredentials: true
-            // }
+            crossDomain: true,
+            xhrFields: {
+                withCredentials: true
+            }
 
          })
 
         .success(function(data) {
-          alert("success")
+          // alert("success")
           // console.log(data[6].PlayerID);
           // console.log(data[9].FirstName);
             var key = $dropdown.val();
