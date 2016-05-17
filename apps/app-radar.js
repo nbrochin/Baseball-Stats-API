@@ -8,14 +8,15 @@ $("#first-choice").change(function() {
     var team_id = $('#first-choice').val();
     console.log(team_id);
 
+$(function() {
         // var params = {
         // key: "bb32e0f1b71046f4a5844dc55af9e844",
 
         // };
       
        $.getJSON({
-            url: "http://api.sportradar.us/mlb-t5/seasontd/2016/REG/teams/1d678440-b4b1-4954-9b39-70afb3ebbcfa/statistics.json?api_key=pfqnd9eqk9j4jjc7au287rdt?callback=?",
-            // dataType: "jsonp",
+            url: "http://api.sportradar.us/mlb-t5/seasontd/2016/REG/teams/1d678440-b4b1-4954-9b39-70afb3ebbcfa/statistics.json?api_key=pfqnd9eqk9j4jjc7au287rdt?callback=",
+            dataType: "jsonp",
             // type: "GET",
             // crossDomain: true,
             // xhrFields: {
@@ -82,8 +83,8 @@ $("#first-choice").change(function() {
 
 
                 $.getJSON({
-                        url: "http://api.sportradar.us/mlb-t5/seasontd/2016/REG/teams/1d678440-b4b1-4954-9b39-70afb3ebbcfa/statistics.json?api_key=pfqnd9eqk9j4jjc7au287rdt?callback=?",
-                        // dataType: "jsonp",
+                        url: "http://api.sportradar.us/mlb-t5/seasontd/2016/REG/teams/1d678440-b4b1-4954-9b39-70afb3ebbcfa/statistics.json?api_key=pfqnd9eqk9j4jjc7au287rdt?callback=",
+                        dataType: "jsonp",
                         // type: "GET",
                       
                 })
@@ -177,7 +178,8 @@ $("#first-choice").change(function() {
           })
           })
 
-        });
+        })
+});
             // alert("success")
             // console.log(PID2);
 
