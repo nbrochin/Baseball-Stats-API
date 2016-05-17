@@ -74,12 +74,12 @@ $(function() {
             //   PID2 = $('#second-choice').val();
             // });
             
-                var params = {
+                // var params = {
                 // key: "bb32e0f1b71046f4a5844dc55af9e844",
 
                 // };
 
-                console.log(PID2);
+                // console.log(PID2);
                 $.ajax({
                         url: "https://api.sportradar.us/mlb-t5/seasontd/2016/REG/teams/" + team_id + "/statistics.json?api_key=pfqnd9eqk9j4jjc7au287rdt",
                         // dataType: "jsonp",
