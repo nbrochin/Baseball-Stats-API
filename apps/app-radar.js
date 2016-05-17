@@ -8,7 +8,6 @@ $("#first-choice").change(function() {
     var team_id = $('#first-choice').val();
     console.log(team_id);
 
-$(function() {
         // var params = {
         // key: "bb32e0f1b71046f4a5844dc55af9e844",
 
@@ -178,8 +177,7 @@ $(function() {
           })
           })
 
-        })
-});
+        });
             // alert("success")
             // console.log(PID2);
 
