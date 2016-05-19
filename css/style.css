@@ -186,6 +186,10 @@ h1 {
   z-index: 000;
 }
 
+span.playerPhoto {
+  margin-right: 12px;
+}
+
 span.playerName {
   font-size: 46px;
   line-height: 54px;
@@ -195,19 +199,33 @@ span.playerName {
 span.playerSalary {
   font-size: 46px;
   line-height: 54px;
-  color: #076961 !important;
+  color: #1f667d !important;
 }
 
 span.playerNumber {
   font-size: 46px;
   line-height: 54px;
-  color: #223332 !important;
+  color: #823332 !important;
+}
+
+span.playerNumber em {
+  font-size: 32px;
+  line-height: 24px;
+  color: #823332 !important;
 }
 
 span.vDivider {
   font-size: 42px;
   line-height: 54px;
   margin: 0px 8px 0px 12px;
+  color: #888888 !important;
+}
+
+span.hshDivider {
+  font-size: 32px;
+  line-height: 54px;
+  vertical-align: text-bottom;
+  margin: 0px 1px 0px 1px;
   color: #888888 !important;
 }
 
