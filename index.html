@@ -33,7 +33,7 @@
 				<tr>
 				<td>
 					<p>
-						<span style="color: wheat; font-size: 20px; padding-bottom: 6px;"> MLB Teams 2016:</span>
+						<span style="color: wheat; font-size: 20px; padding-bottom: 6px;"> MLB Teams:</span>
 						<select id="first-choice" class="trigger_demo2">
 							<option>Please Choose a Team</option>
 								<option value="BAL">Baltimore Orioles</option>
@@ -71,14 +71,28 @@
 				</td>
 				<td>
 					<p>
-						<span style="color: wheat; font-size: 20px; padding-bottom: 6px;"> MLB Players 2016:</span>
+						<span class="playersLabel">MLB Players:</span>
 						<select id="second-choice" class="trigger_demo2">
 							<option>Please Choose a Team</option>
 							<option value="LAD">LA Dodgers</option>
 				  			<option value="SD">San Diego</option>
 				  			<option value="SF">San Francisco</option>
-					
-				</td><td><button id="idGo" class="btn btn-danger">go</button></td>
+						</select>
+					</p>
+				</td>
+				<td>
+						<p style="width:200px;">
+						<span class="playersLabel">Season:</span>
+						<select id="third-choice" class="trigger_demo3">
+							<option>Choose a Year</option>
+							<option value="2016">2016</option>
+				  			<option value="2015">2015</option>
+				  		</select>
+				  		</p>
+				</td>
+				<td>
+					<button id="idGo" class="btn btn-danger">go</button>
+				</td>
 			</tr>
 			</table>
 		
@@ -88,9 +102,9 @@
 		<section class="player-team"> 
 
 				<div class="top-data-section">
-					<span class="playerPhoto"><img src="http://static.fantasydata.com/headshots/mlb/low-res/10003328.png"></span><span class="playerName">Aledmys Diaz</span><span class="vDivider">|</span><span class="hshDivider">#</span><span class="playerNumber"> 36</span><span class="vDivider">|</span><span class="city-team-name">St. Louis Cardinals</span><span class="vDivider">|</span><span class="playerSalary"> $1,350,000</span></h2>
+					<span class="playerPhoto"><img src="http://static.fantasydata.com/headshots/mlb/low-res/10003328.png"></span><span class="playerName">Aledmys Diaz</span><span class="vDivider">|</span><span class="hshDivider">#</span><span class="playerNumber"> 36</span><span class="vDivider">|</span><span class="playerPosition"> 1B</span><span class="vDivider">|</span><span class="city-team-name">St. Louis Cardinals</span><span class="vDivider">|</span><span class="playerSalary"> $1,350,000</span></h2>
 				
-	  			<div class="yr-selector"><span class="seasonSelect" data-name="2016">2016</span> &nbsp;&nbsp;<span class="seasonSelect" data-name="2015">2015</span><!-- <button id="test">test</button> --> 
+	  			<div class="yr-selector"><span class="seasonSelect" dataName="2016">2016</span> &nbsp;&nbsp;<span class="seasonSelect" dataName="2015">2015</span><!-- <button id="test">test</button> --> 
 	  			</div>
 	  		</section>
 	  			<div class ="">
@@ -100,6 +114,7 @@
 			  				<th>Games</th>
 			  				<th>ABs</th>
 			  				<th>Hits</th>
+			  				<th>HRs</th>
 			  				<th>RBIs</th>
 			  				<th>Average</th>
 			  				<th>SLG</th>
@@ -110,7 +125,8 @@
 
 			  				<td class="Games">24</td>
 			  				<td class="AtBats">80</td>
-			  				<td class="Hits">31</td>
+			  				<td class="Hits">22</td>
+			  				<td class="HomeRuns">8</td>
 			  				<td class="RunsBattedIn"></td>
 			  				<td class="BattingAverage"></td>
 			  				<td class="SluggingPercentage"></td>
@@ -125,7 +141,8 @@
 			  				<th>Games</th>
 			  				<th>Wins</th>
 			  				<th>Losses</th>
-			  				<th>InningsPitched</th>
+			  				<th>Saves</th>
+			  				<th>IP</th>
 			  				<th>ERA</th>
 			  				<th>Walks</th>
 			  				<th>Hits</th>
@@ -133,8 +150,9 @@
 			  			</tr>
 			  			<tr>
 			  				<td class="Games">24</td>
-			  				<td class="Wins">80</td>
-			  				<td class="Losses">31</td>
+			  				<td class="Wins">6</td>
+			  				<td class="Losses">3</td>
+			  				<td class="Saves">4</td>
 			  				<td class="IP"></td>
 			  				<td class="ERA"></td>
 			  				<td class="pWalks"></td>
@@ -164,13 +182,13 @@
 			<ul class="footer-box">
 					<input type="hidden" id="pageToken" value="">
                         <li class="app-instructions" role="group">
-                          <button type="button" id="salaryHistory" class="btn btn-warning">player images</button>
+                          <button type="button" id="salaryHistory" class="btn btn-warning">reset</button>
                          <li class="app-instructions" role="group">
                           <button type="button" id="salaryDetail" class="btn btn-danger">salary detail</button>
                         
 					
-					<li class="historical-data" id="total-results-container">CHART HISTORICAL DATA</li>
-					
+<!-- 					<li class="historical-data" id="total-results-container">CHART HISTORICAL DATA</li>
+ -->					
 					
     				
 			</ul>
