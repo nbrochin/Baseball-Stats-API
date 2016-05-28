@@ -138,7 +138,7 @@ $(document).ready(function(){
                 // console.log(data.PositionCategory);
                 $('table.pitcher-season-stats').show();
                 $('table.batter-season-stats').hide();
-                $('div.top-data-section span.playerPhoto').html("<img style='border: solid 3px #444444; background-color: wheat; padding: 6px 6px 0px 6px;' src='http://static.fantasydata.com/headshots/mlb/low-res/" + PID2 + ".png'" + " alt='" + Name + "'>");
+                $('div.top-data-section span.playerPhoto').html("<img style='border: solid 3px #444444; background-color: #f8f6dd; padding: 6px 6px 0px 6px;' src='http://static.fantasydata.com/headshots/mlb/low-res/" + PID2 + ".png'" + " alt='" + Name + "'>");
                 $('div.top-data-section span.playerName').text(q);
                 $('div.top-data-section span.city-team-name').text(teamName);
                 $('div.top-data-section span.playerNumber').text(JerseyNumber);
