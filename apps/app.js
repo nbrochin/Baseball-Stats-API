@@ -50,6 +50,7 @@ $(document).ready(function(){
                 var trigger = $dropdown.val();
                 var vals = [];
                 var PID2 = $('#second-choice').val();
+                var season = $('#third-choice').val();
                 
                 function toUSD(number) {
                 var number = number.toString(), 
@@ -123,7 +124,7 @@ $(document).ready(function(){
                 // console.log(data.PositionCategory);
                 $('table.pitcher-season-stats').show();
                 $('table.batter-season-stats').hide();
-                $('div.top-data-section span.playerPhoto').html("<img style='border: solid 2px #444444; background-color: white; padding: 6px 6px 0px 6px' src='http://static.fantasydata.com/headshots/mlb/low-res/" + PID2 + ".png'" + " alt='" + Name + "'>");
+                $('div.top-data-section span.playerPhoto').html("<img style='border: solid 3px #444444; background-color: wheat; padding: 6px 6px 0px 6px;' src='http://static.fantasydata.com/headshots/mlb/low-res/" + PID2 + ".png'" + " alt='" + Name + "'>");
                 $('div.top-data-section span.playerName').text(q);
                 $('div.top-data-section span.city-team-name').text(teamName);
                 $('div.top-data-section span.playerNumber').text(JerseyNumber);
@@ -143,7 +144,7 @@ $(document).ready(function(){
 
                 $('table.batter-season-stats').show();
                 $('table.pitcher-season-stats').hide();
-                $('div.top-data-section span.playerPhoto').html("<img src='http://static.fantasydata.com/headshots/mlb/low-res/" + PID2 + ".png'" + ">");
+                $('div.top-data-section span.playerPhoto').html("<img style='border: solid 3px #444444; background-color: white; padding: 6px 6px 0px 6px;' src='http://static.fantasydata.com/headshots/mlb/low-res/" + PID2 + ".png'" + " alt='" + Name + "'>");
                 $('div.top-data-section span.playerName').text(q);
                 $('div.top-data-section span.city-team-name').text(teamName);
                 $('div.top-data-section span.playerNumber').text(JerseyNumber);
@@ -195,6 +196,7 @@ $(document).ready(function(){
                                   var thumbnailLink = {};
                                   var image = {};
                                   var items = {};
+                                  var link = {};
                                   var item = data.items;
                                   var images = "";
 
@@ -203,7 +205,7 @@ $(document).ready(function(){
                                 
                                       // in production code, item.htmlTitle should have the HTML entities escaped.
                                       // $("section#QA-holder").append += "<br>" + response.items[i];
-                                      images += "<span><img src=" + item[i].image.thumbnailLink + "></span>";
+                                      images += "<span><a href='" + item[i].link + "' target='_blank'><img src='" + item[i].image.thumbnailLink + "'></a></span>";
                                       
                                       
                                     }
@@ -221,14 +223,14 @@ $(document).ready(function(){
   });
 
 
-                   var season = "none";
-                   var dataName = "";
-                   $(".seasonSelect").click(function() {
-                      season = $(this).attr("dataName");
-                      $(".seasonSelect").removeClass('active');
-                      $(this).addClass('active');
+                //    var season = $('#third-choice').val();
+                //    var dataName = "";
+                //    $(".seasonSelect").click(function() {
+                //       season = $(this).attr("dataName");
+                //       $(".seasonSelect").removeClass('active');
+                //       $(this).addClass('active');
 
-                });
+                // });
 
               
 

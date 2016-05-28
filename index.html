@@ -41,7 +41,7 @@
                 				<option value="NYY">New York Yankees</option>
               				 	<option value="TB">Tampa Bay Rays</option>
                 				<option value="TOR">Toronto Blue Jays</option>
-                				<option value="CWS">Chi White Sox</option>
+                				<option value="CHW">Chi White Sox</option>
                 				<option value="CLE">Cleveland Indians</option>
                 				<option value="DET">Detroit Tigers</option>
 				                <option value="KC">Kansas City Royals</option>
@@ -55,8 +55,8 @@
 				  				<option value="MIA">Miami Marlins</option>	
 				  				<option value="NYM">NY Mets</option>
 				  				<option value="PHI">Philadelphia Phillies</option>
-				  				<option value="WAS">Washington Nationals</option>
-				  				<option value="CHI">Chicago Cubs</option>
+				  				<option value="WSH">Washington Nationals</option>
+				  				<option value="CHC">Chicago Cubs</option>
 				  				<option value="CIN">Cincinatti Reds</option>
 				  				<option value="MIL">Milwaulkee Brewers</option>
 				  				<option value="PIT">Pittsburgh Pirates</option>
@@ -84,9 +84,10 @@
 						<p style="width:200px;">
 						<span class="playersLabel">Season:</span>
 						<select id="third-choice" class="trigger_demo3">
-							<option>Choose a Year</option>
+							
 							<option value="2016">2016</option>
 				  			<option value="2015">2015</option>
+				  			<option value="2014">2014</option>
 				  		</select>
 				  		</p>
 				</td>
@@ -102,9 +103,9 @@
 		<section class="player-team"> 
 
 				<div class="top-data-section">
-					<span class="playerPhoto"><img src="http://static.fantasydata.com/headshots/mlb/low-res/10003328.png"></span><span class="playerName">Aledmys Diaz</span><span class="vDivider">|</span><span class="hshDivider">#</span><span class="playerNumber"> 36</span><span class="vDivider">|</span><span class="playerPosition"> 1B</span><span class="vDivider">|</span><span class="city-team-name">St. Louis Cardinals</span><span class="vDivider">|</span><span class="playerSalary"> $1,350,000</span></h2>
+					<span class="playerPhoto"><img style="border: solid 3px #444444; background-color: white; padding: 6px 6px 0px 6px;" src="http://static.fantasydata.com/headshots/mlb/low-res/10003328.png" alt="Aledmys Diaz"></span><span class="playerName">Aledmys Diaz</span><span class="vDivider">|</span><span class="hshDivider">#</span><span class="playerNumber"> 36</span><span class="vDivider">|</span><span class="playerPosition"> 1B</span><span class="vDivider">|</span><span class="city-team-name">St. Louis Cardinals</span><span class="vDivider">|</span><span class="playerSalary"> $1,350,000</span></h2>
 				
-	  			<div class="yr-selector"><span class="seasonSelect" dataName="2016">2016</span> &nbsp;&nbsp;<span class="seasonSelect" dataName="2015">2015</span><!-- <button id="test">test</button> --> 
+	  			<!-- <div class="yr-selector"><span class="seasonSelect" dataName="2016">2016</span> &nbsp;&nbsp;<span class="seasonSelect" dataName="2015">2015</span> -->
 	  			</div>
 	  		</section>
 	  			<div class ="">
@@ -182,9 +183,14 @@
 			<ul class="footer-box">
 					<input type="hidden" id="pageToken" value="">
                         <li class="app-instructions" role="group">
-                          <button type="button" id="salaryHistory" class="btn btn-warning">reset</button>
+                        <a href="http://blog.screaminggarlic.com">Copyright © 2016, Nate Brochin</a>
+                        </li>
+                        <li class="app-instructions" role="group">
+                        <a href="https://nbrochin.github.io/NB-Portfolio-Project" target=_'blank'>N. Brochin Portfolio</a>
+                        </li>
+                         <!--  <button type="button" id="salaryHistory" class="btn btn-warning">reset</button>
                          <li class="app-instructions" role="group">
-                          <button type="button" id="salaryDetail" class="btn btn-danger">salary detail</button>
+                          <button type="button" id="salaryDetail" class="btn btn-danger">salary detail</button> -->
                         
 					
 <!-- 					<li class="historical-data" id="total-results-container">CHART HISTORICAL DATA</li>
@@ -202,29 +208,7 @@
  			<script type="text/javascript" src="apps/app.js"></script>
 		
 		
-		<div id="jq-dropdown-3" class="jq-dropdown jq-dropdown-tip jq-dropdown-scroll">
-						<!-- <div id="first-choice"> -->
-						 <select id="first-choice" class="jq-dropdown-menu">
-						
-<!-- 						<select id="first-choice" class="turnintodropdown_demo2" >
- -->							
-								
-						</select>
-						</div>
-		</div>
-		<div id="jq-dropdown-3" class="jq-dropdown jq-dropdown-tip jq-dropdown-scroll">
-						 <select id="second-choice" class="jq-dropdown-menu">
-						
-<!-- 						<select id="first-choice" class="turnintodropdown_demo2" >
- -->							
-							<option>Please select a team</option>
-							<option value="RedSox">RedSox</option>
-						<option  value="redSox">Boston</option>
-                		<option  value="yankees">New York</option>
-              			<option  value="rays">Tampa Bay</option>
-							
-						</select>
-		</div>
+	
 			
 	</body>
 </html>
