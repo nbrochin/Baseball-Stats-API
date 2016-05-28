@@ -191,8 +191,7 @@ $(document).ready(function(){
                                 url = 'https://www.googleapis.com/customsearch/v1';
 
                                   $.getJSON(url, params, function(data){
-                                  // showResults(response[14].items);
-                                  console.log(data.items);
+                                  // console.log(data.items);
                                   var thumbnailLink = {};
                                   var image = {};
                                   var items = {};
