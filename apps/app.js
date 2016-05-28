@@ -1,5 +1,6 @@
 $(document).ready(function(){
 
+    $('table.batter-season-stats').show();
     $("#first-choice").change(function() {
 
         var $dropdown = $(this);
@@ -54,9 +55,9 @@ $(document).ready(function(){
                 
                 function toUSD(number) {
                 var number = number.toString(), 
-                dollars = number.split('.')[0], 
-                cents = (number.split('.')[1] || '') +'00';
-                dollars = dollars.split('').reverse().join('')
+                    dollars = number.split('.')[0], 
+                    cents = (number.split('.')[1] || '') +'00';
+                    dollars = dollars.split('').reverse().join('')
                     .replace(/(\d{3}(?!$))/g, '$1,')
                     .split('').reverse().join('');
                     return '$' + dollars + '.' + cents.slice(0, 2);
@@ -100,14 +101,27 @@ $(document).ready(function(){
                 ERA = data.EarnedRunAverage.toFixed(2),
                 pWalks = data.PitchingWalks.toFixed(0),
                 pHits = data.PitchingHits.toFixed(0),
+                WHIP = data.WalksHitsPerInningsPitched.toFixed(2),
                 BAA = data.PitchingBattingAverageAgainst.toFixed(3),
                 Salary = salary[PID2],
                 JerseyNumber = jerseyNo[PID2],
                 Position = data.Position;
 
+             
+                  if (data.Position == "SP") {
+                    $('span.playerSalaryPer').text(toUSD(Salary/Wins) + ' / win');
+                   
+                 } else if (data.Position == "RP") {
+                    $('span.playerSalaryPer').text(toUSD(Salary/Saves) + ' / save');
+
+                  } else {
+                    $('span.playerSalaryPer').text(toUSD(Salary/Hits) + ' / hit');
+                  }
+                  
+                
 
                 function toUSD(number) {
-                    if (number == undefined | null) {
+                    if (number == undefined | null ) {
                       $('div.top-data-section span.playerSalary').text("N/A");
 
                     } else {
@@ -138,6 +152,7 @@ $(document).ready(function(){
                 $('td.ERA').text(ERA);
                 $('td.pWalks').text(pWalks);
                 $('td.pHits').text(pHits);
+                $('td.whip').text(WHIP);
                 $('td.BAA').text(BAA);
             
             } else  {
@@ -160,9 +175,11 @@ $(document).ready(function(){
                 $('td.OnBasePlusSlugging').text(OPS);
                 $('td.OnBasePercentage').text(OnBasePercentage);
 
-            
+
             }
 
+               
+            
                               $(function(){
                               
                                   q = data.Name;
